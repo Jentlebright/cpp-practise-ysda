@@ -8,7 +8,7 @@ int main() {
         if (i >= 5 && i <= 9) {
             continue;
         }
-        if (i >= 17 && i <= 39) {
+        if (i >= 17 && i <= 37) {
             continue;
         }
         if (i >= 78 && i <= 87) {
