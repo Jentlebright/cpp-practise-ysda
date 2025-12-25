@@ -1,13 +1,13 @@
 #include <iostream>
 
 int main() {
-    int a = 0, b = 0;
-    std::cin >> a >> b;
+    char ch, inp;
+    std::cin >> inp;
 
     // Ваш код здесь, остальное писать не нужно
-    int* p_a = &a;
-    int* p_b = &b;
+    char* p_ch = &ch;
+    *p_ch = inp + 1;
 
-    std::cout << *p_a + *p_b << std::endl;
+    std::cout << *p_ch << std::endl;
     return 0;
 }
