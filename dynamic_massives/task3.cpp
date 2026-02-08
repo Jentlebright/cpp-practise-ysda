@@ -10,8 +10,8 @@ int main() {
         cin >> pointer[i];
     }
     sort(pointer, pointer + n);
-    for (int i = 0; i < n; i++) {
-        cout << pointer[i] << endl;
+    for (int j = 0; j < n; j++) {
+        cout << pointer[j] << endl;
     }
     delete[] pointer;
     return 0;
