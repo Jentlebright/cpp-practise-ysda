@@ -2,29 +2,26 @@
 using namespace std;
 
 int main() {
-    const int MAX_SIZE = 10000;
-    int arr[MAX_SIZE];
-    int counter = 0;
-    int n;
+    int n, size = 0;
+    int* arr = nullptr;
 
-    while (true) {
-        cin >> n;
-        if (n == 0) break;
-        arr[counter] = n;
-        counter++;
+    while (cin >> n && n != 0) {
+        int* tmp = new int[size + 1];
+        for (int i = 0; i < size; i++)
+            tmp[i] = arr[i];
+        tmp[size++] = n;
+        delete[] arr;
+        arr = tmp;
     }
 
-    for (int i = 0; i < counter / 2; i++) {
-        int sum = arr[i] + arr[counter - 1 - i];
-        arr[i] = sum;
-        arr[counter - 1 - i] = sum;
+    for (int i = 0; i < size / 2; i++) {
+        int sum = arr[i] + arr[size - 1 - i];
+        arr[i] = arr[size - 1 - i] = sum;
     }
 
-    for (int i = 0; i < counter; i++) {
-        cout << arr[i];
-        if (i < counter - 1) cout << " "; 
-    }
-    cout << endl;
+    for (int i = 0; i < size; i++)
+        cout << arr[i] << (i + 1 < size ? " " : "");
 
+    delete[] arr;
     return 0;
 }
