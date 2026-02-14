@@ -34,5 +34,10 @@ int main() {
         }
         cout << endl;
     }
+    for (int i = 0; i < rows; i++) {
+    delete[] matrix[i];
+    }
+    delete[] matrix;
+    delete[] col_to_help;
     return 0;
 }
