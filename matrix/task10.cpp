@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+// basic implemantation of reading
 int main() {
     int n, m;
     cin >> n >> m;
