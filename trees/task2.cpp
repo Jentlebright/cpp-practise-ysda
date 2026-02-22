@@ -17,15 +17,18 @@ int main() {
 
     for (int i = 0; i < n; i++) {
         int num = 1;
+        bool hasOne = false;
         for (int j = 0; j < n; j++) {
             if (matrix[i][j] == 1) {
                 cout << num << " ";
+                hasOne = true;
                 num++;
             }
             else {
                 num++;
             }
         }
+        if (!hasOne) cout << 0;
         cout << endl;
     }
 
